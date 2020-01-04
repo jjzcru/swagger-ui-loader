@@ -1,0 +1,14 @@
+{
+  "name": "swagger-ui-loader",
+  "version": "0.1.0",
+  "description": "Swagger ui server that loads from a config file",
+  "main": "app.js",
+  "repository": "https://github.com/jjzcru/swagger-ui-loader",
+  "author": "Jose J. Cruz Torres <jjzcru@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "open": "^7.0.0",
+    "swagger-ui-express": "^4.1.2"
+  }
+}
