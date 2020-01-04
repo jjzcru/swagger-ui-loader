@@ -9,6 +9,11 @@
   "dependencies": {
     "express": "^4.17.1",
     "open": "^7.0.0",
-    "swagger-ui-express": "^4.1.2"
+    "swagger-ui-express": "^4.1.2",
+    "yamljs": "^0.3.0"
+  },
+  "swagger": {
+    "file": "./swagger.json",
+    "port": 8888
   }
 }
