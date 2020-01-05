@@ -28,8 +28,7 @@ app.listen(port, async () => {
         console.log('Swagger UI Server listening on port \x1b[36m%s\x1b[0m', `${port}`);
         await open(`http://localhost:${port}`);
     } catch(e) {
-        console.error(e);
-        process.exit(1);
+        throwError(e.message);
     }
 });
 
@@ -65,17 +64,14 @@ function getTargetFile() {
         throwError(`Swagger configuration file '${filePath}' do not exist`)
     }
 
+    // I search for 'swagger.yml', 'swagger.yaml' or 'swagger.json' as default value
     const defaultPath = getDefaultPath();
     if(!!defaultPath) {
         return defaultPath;
     }
 
-    throwError(`Swagger configuration file 'swagger.json', 'swagger.yml' or 'swagger.yaml' not found`)
-
-    // I search for 'swagger.yml', 'swagger.yaml' or 'swagger.json' as default value
-    
     // If no file is found it throw an error
-    
+    throwError(`Swagger configuration file 'swagger.json', 'swagger.yml' or 'swagger.yaml' not found`);
 }
 
 function getFileFromPkg() {
