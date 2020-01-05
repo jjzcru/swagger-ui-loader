@@ -1,0 +1,34 @@
+{
+  "name": "swagger-ui-loader",
+  "version": "0.1.0",
+  "description": "Swagger ui server that loads from a config file",
+  "main": "cli.js",
+  "repository": "https://github.com/jjzcru/swagger-ui-loader",
+  "author": "Jose J. Cruz <jjzcru@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "open": "^7.0.0",
+    "swagger-ui-express": "^4.1.2",
+    "yamljs": "^0.3.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "cli",
+    "swagger",
+    "swagger-ui",
+    "swagger-ui-loader",
+    "loader"
+  ],
+  "bin": {
+    "swagger-ui-loader": "./cli.js"
+  },
+  "files": [
+    "cli.js"
+  ],
+  "engines": {
+    "node": ">=10.15.1"
+  }
+}
