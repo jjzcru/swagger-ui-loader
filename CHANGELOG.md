@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.1.2] - 2020-01-05
+
+### Fixed
+- Set the project root as the root directory for default file paths and port when reading from `package.json`
+
 ## [0.1.1] - 2020-01-05
 
 ### Fixed
@@ -14,5 +19,6 @@ All notable changes to this project will be documented in this file.
 - CHANGELOG.md file
 - README.md file
 
-[0.1.1]: https://github.com/jjzcru/swagger-ui-loader/releases/tag/v0.1.1
+
+[0.1.2]: https://github.com/jjzcru/swagger-ui-loader/releases/tag/v0.1.2[0.1.1]: https://github.com/jjzcru/swagger-ui-loader/releases/tag/v0.1.1
 [0.1.0]: https://github.com/jjzcru/swagger-ui-loader/releases/tag/v0.1.0
