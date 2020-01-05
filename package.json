@@ -11,9 +11,5 @@
     "open": "^7.0.0",
     "swagger-ui-express": "^4.1.2",
     "yamljs": "^0.3.0"
-  },
-  "swagger": {
-    "file": "./swagger.yml",
-    "port": 8888
   }
 }
