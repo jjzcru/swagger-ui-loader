@@ -59,10 +59,10 @@ function getTargetFile() {
                     ext: ext
                 }
             default: 
-            throwError(`File extension '${ext}' is not valid`)
+                throwError(`File extension '${ext}' is not valid`);
         }
 
-        throwError(`Swagger configuration file '${filePath}' do not exist`)
+        throwError(`Swagger configuration file '${filePath}' do not exist`);
     }
 
     // I search for 'swagger.yml', 'swagger.yaml' or 'swagger.json' as default value
