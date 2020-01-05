@@ -1,5 +1,7 @@
-## Installation
+## Description 
+`swagger-ui-loader` is a package that enables you to run a `Swagger UI` server from a configuration file with a simple setup, no programming required.
 
+## Installation
 ### Npm
 ```console
 npm install swagger-ui-loader --save-dev 
@@ -15,13 +17,13 @@ Add a run script that executes `swagger-ui-loader`. Your `package.json` should l
 
 ```json
 {
-	"name": "i-am-your-package🤖",
-	"scripts": {
-		"swagger": "swagger-ui-loader"
-	},
-	"devDependencies": {
-		"swagger-ui-loader": "^0.1.0"
-	}
+  "name": "i-am-your-package🤖",
+  "scripts": {
+    "swagger": "swagger-ui-loader"
+  },
+  "devDependencies": {
+    "swagger-ui-loader": "^0.1.0"
+  }
 }
 ```
 
@@ -35,17 +37,17 @@ You can add a property `swagger` to `package.json` with the following properties
 The `package.json` will look like this with those properties.
 ```json
 {
-	"name": "i-am-your-package🤖",
-	"scripts": {
-		"swagger": "swagger-ui-loader"
-    },
-    "swagger": {
-        "file": "./docs/swagger.yml",
-        "port": 8888,
-    },
-	"devDependencies": {
-		"swagger-ui-loader": "^0.1.0"
-	}
+  "name": "i-am-your-package🤖",
+  "scripts": {
+    "swagger": "swagger-ui-loader"
+  },
+  "swagger": {
+    "file": "./docs/swagger.yml",
+    "port": 8888,
+  },
+  "devDependencies": {
+    "swagger-ui-loader": "^0.1.0"
+  }
 }
 ```
 
