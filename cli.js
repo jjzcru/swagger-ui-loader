@@ -12,6 +12,9 @@ const app = express();
 const port = getPort();
 const swaggerFile = getTargetFile();
 
+const rootProjectPath = path.join(__dirname, '..', '..');
+swaggerFile.file = path.join(rootProjectPath, swaggerFile.file);
+
 let swaggerDocument;
 switch(swaggerFile.ext) {
     case '.yaml':
