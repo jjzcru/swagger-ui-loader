@@ -9,11 +9,11 @@ const swaggerUi = require('swagger-ui-express');
 const YAML = require('yamljs');
 
 const app = express();
-const port = getPort();
-const swaggerFile = getTargetFile();
 
 const rootProjectPath = path.join(__dirname, '..', '..');
-swaggerFile.file = path.join(rootProjectPath, swaggerFile.file);
+
+const port = getPort();
+const swaggerFile = getTargetFile();
 
 let swaggerDocument;
 switch(swaggerFile.ext) {
@@ -37,8 +37,9 @@ app.listen(port, async () => {
 });
 
 function getPort() {
-    if(fs.existsSync('./package.json')) {
-        const pkg = require('./package.json');
+    const pkgPath = path.join(rootProjectPath, './package.json');
+    if(fs.existsSync(pkgPath)) {
+        const pkg = require(pkgPath);
         if(!!pkg.swagger && !!pkg.swagger.port) {
             return parseInt(pkg.swagger.port);
         }
@@ -79,17 +80,22 @@ function getTargetFile() {
 }
 
 function getFileFromPkg() {
-    if(fs.existsSync('./package.json')) {
-        const pkg = require('./package.json');
+    const pkgPath = path.join(rootProjectPath, './package.json');
+    if(fs.existsSync(pkgPath)) {
+        const pkg = require(pkgPath);
         if(!!pkg.swagger && !!pkg.swagger.file) {
-            return pkg.swagger.file;
+            return path.join(rootProjectPath, pkg.swagger.file);
         }
     }
     return null;
 }
 
 function getDefaultPath() {
-    const defaultFiles = ['./swagger.json', './swagger.yml', './swagger.yaml'];
+    const defaultFiles = [
+        path.join(rootProjectPath, './swagger.json'), 
+        path.join(rootProjectPath, './swagger.yml'), 
+        path.join(rootProjectPath, './swagger.yaml'), 
+    ];
     for(const file of defaultFiles) {
         if(fs.existsSync(file)) {
             const ext = path.extname(file);
