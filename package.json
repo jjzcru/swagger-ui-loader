@@ -13,7 +13,7 @@
     "yamljs": "^0.3.0"
   },
   "swagger": {
-    "file": "./swagger.json",
+    "file": "./swagger.yml",
     "port": 8888
   }
 }
